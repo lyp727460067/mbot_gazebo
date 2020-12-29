@@ -12,10 +12,9 @@
 <xacro:include filename="$(find mbot_gazebo)/urdf/create.urdf.xacro"/>
   <xacro:include filename="$(find mbot_gazebo)/urdf/kobuki.urdf.xacro" />
   <xacro:kobuki/>
-P
  <xacro:include filename="$(find mbot_gazebo)/urdf/stacks/circles.urdf.xacro"/>
   <xacro:include filename="$(find mbot_gazebo)/urdf/stacks/hexagons.urdf.xacro"/>
-  <xacro:include filename="$(find mbot_gazebo)/urdf/sensors/kinect.urdf.xacro"/>
+ <!-- <xacro:include filename="$(find mbot_gazebo)/urdf/sensors/kinect.urdf.xacro"/>-->
   <xacro:include filename="$(find mbot_gazebo)/urdf/sensors/hokuyo.urdf.xacro"/>
   <!--
 -->

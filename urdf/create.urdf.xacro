@@ -103,9 +103,9 @@
 	
 	
 	  <joint name="base_footprint_joint" type="fixed">
-	    <origin xyz="0 0 0.017" rpy="0 0 0" />        
-	    <parent link="base_footprint"/>
-	    <child link="base_link" />
+	    <origin xyz="0 0 -0.017" rpy="0 0 0" />        
+	    <parent link="base_link"/>
+	    <child link="base_footprint" />
 	  </joint>
 	
 	  <joint name="base_wall_sensor_joint" type="fixed">
