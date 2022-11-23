@@ -36,8 +36,34 @@
           <distortion_t2>0.0</distortion_t2>
           <pointCloudCutoff>0.4</pointCloudCutoff>
         </plugin>
+
       </sensor>
     </gazebo>
+
+            <gazebo>
+            <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+                <rosDebugLevel>Debug</rosDebugLevel>
+                <publishWheelTF>true</publishWheelTF>
+                <robotNamespace>/</robotNamespace>
+                <publishTf>1</publishTf>
+                <publishWheelJointState>true</publishWheelJointState>
+                <alwaysOn>true</alwaysOn>
+                <updateRate>100.`</updateRate>
+                <legacyMode>true</legacyMode>
+                <leftJoint>wheel_left_joint</leftJoint>
+                <rightJoint>wheel_right_joint</rightJoint>
+                <wheelSeparation>.230</wheelSeparation>
+                <wheelDiameter>0.07</wheelDiameter>
+                <broadcastTF>1</broadcastTF>
+                <wheelTorque>1</wheelTorque>
+                <wheelAcceleration>0.8</wheelAcceleration>
+                <commandTopic>cmd_vel</commandTopic>
+                <odometryFrame>odom</odometryFrame> 
+                <odometryTopic>odom</odometryTopic> 
+                <robotBaseFrame>base_link</robotBaseFrame>
+            </plugin>
+        </gazebo> 
+        
   </xacro:macro>
   <xacro:macro name="turtlebot_sim_2dsensor">
   <gazebo reference="hokuyo_link">
